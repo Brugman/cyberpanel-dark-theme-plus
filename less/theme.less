@@ -1,0 +1,189 @@
+/**
+ * Settings.
+ */
+
+@remove-loader: true;
+@remove-new: true;
+@remove-icon-wiggle: true;
+
+/**
+ * Descriptive colors.
+ */
+
+@color-black:   #000;
+
+@color-dark-1:  #050505;
+@color-dark-2:  #101010;
+@color-dark-3:  #151515;
+@color-dark-4:  #202020;
+@color-dark-5:  #252525;
+
+@color-light-5: #aaa;
+@color-light-4: #bbb;
+@color-light-3: #ccc;
+@color-light-2: #ddd;
+@color-light-1: #eee;
+
+@color-white:   #fff;
+
+@color-purple: #3939ad;
+@color-blue: #0dadff;
+@color-orange: #ff9a00;
+@color-green: #015249;
+
+/**
+ * Functional colors.
+ */
+
+@color-text: @color-white;
+@color-link: @color-white;
+
+@color-nav-bg: @color-dark-1;
+@color-main-bg: @color-dark-2;
+
+/**
+ * Override colors.
+ */
+
+body {
+    background-color: @color-main-bg;
+    color: @color-text;
+}
+label {
+    color: @color-text;
+}
+#page-header {
+    background: @color-dark-1 !important;
+}
+#page-sidebar {
+    #sidebar-menu {
+        background-color: @color-nav-bg;
+        > li:nth-child(2) a:nth-child(1) span {
+            color: @color-orange !important;
+        }
+    }
+    ul {
+        li {
+            a .glyph-icon {
+                color: @color-text;
+                opacity: 1;
+            }
+            &.header {
+                color: @color-text;
+            }
+        }
+    }
+}
+#sidebar-menu li .sidebar-submenu ul li a:hover,
+#sidebar-menu li .sidebar-submenu ul li a.sfActive {
+    background-color: transparent;
+}
+#page-content {
+    background-color: @color-main-bg;
+}
+#page-title h2 {
+    color: @color-text;
+}
+.panel {
+    background-color: transparent;
+    background-color: @color-dark-3;
+}
+.btn-primary {
+    background-color: @color-dark-4;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @color-dark-5;
+    }
+}
+.form-control {
+    background-color: transparent;
+    color: @color-white;
+    &::placeholder {
+        color: @color-light-2;
+    }
+}
+.c100 {
+    background-color: @color-dark-4;
+    &::after {
+        background-color: transparent;
+    }
+}
+.btn-link, .chosen-disabled .chosen-single, .content-box-header.bg-default > .ui-tabs-nav li > a, .content-box-header.bg-gray > .ui-tabs-nav li > a, .content-box-header.bg-white > .ui-tabs-nav li > a, .content-box-header > .ui-tabs-nav li.ui-tabs-active > a, .pagination > li > a, .pagination > li > span, .table, a, body .content-box-header > .ui-tabs-nav li.ui-tabs-active > a:hover, div.selector {
+    color: @color-link;
+}
+.bootstrap-timepicker-widget table td input:focus, .chosen-container-active, .chosen-container-multi.chosen-container-active, .form-control:focus, .input:focus, .selector.focus, .ui-toolbar input:focus, .ui-toolbar select:focus, div.dataTables_filter input:focus {
+    color: @color-white;
+}
+.dropdown-menu, .minicolors-panel, .popover, .ui-datepicker, .ui-dialog, .ui-menu {
+    background-color: @color-dark-4;
+}
+.dropdown > .dropdown-menu::after, .minicolors-position-bottom .minicolors-panel::after {
+    border-bottom-color: @color-dark-4;
+}
+
+/**
+ * Override borders.
+ */
+
+#sidebar-menu > li > a {
+    border: none;
+}
+#sidebar-menu li .sidebar-submenu {
+    border: none;
+    ul li {
+        border: none;
+    }
+}
+.tile-box {
+    border: none;
+}
+.panel {
+    border: none;
+}
+.bordered-row > .form-group {
+    border: none;
+}
+
+/**
+ * Override fonts.
+ */
+
+h1, h2, h3, h4, h5, h6,
+#page-title > h2,
+#page-title > p {
+    font-family: inherit;
+}
+
+/**
+ * Override misc.
+ */
+
+.divider, .nav-divider, .timeline-horizontal.timeline-box::before {
+    background: none;
+}
+.bootstrap-timepicker-widget table td input, .chosen-container-multi, .chosen-container-single .chosen-search input, .dataTables_length select, .form-control, .input, .ui-toolbar input, .ui-toolbar select, div.dataTables_filter input {
+    box-shadow: none;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+/**
+ * Optionals.
+ */
+
+#loading {
+    height: if( @remove-loader, 0%, 100% );
+}
+#sidebar-menu li span.bs-label.badge-yellow {
+    display: if( @remove-new, none, inline );
+}
+#page-sidebar li a:hover .glyph-icon {
+    animation-name: if( @remove-icon-wiggle, none, swing );
+}
+
+/**
+ * Unsorted.
+ */
+
