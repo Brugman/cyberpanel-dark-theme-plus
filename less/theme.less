@@ -37,6 +37,7 @@
 
 @color-text: @color-white;
 @color-link: @color-white;
+@color-link-hover: @color-blue;
 
 @color-nav-bg: @color-dark-1;
 @color-main-bg: @color-dark-2;
@@ -64,9 +65,15 @@ label {
     }
     ul {
         li {
-            a .glyph-icon {
-                color: @color-text;
-                opacity: 1;
+            a {
+                transition: none;
+                .glyph-icon {
+                    color: @color-text;
+                    opacity: 1;
+                }
+                &:hover .glyph-icon {
+                    color: @color-link-hover;
+                }
             }
             &.header {
                 color: @color-text;
@@ -93,7 +100,7 @@ label {
     &:hover,
     &:active,
     &:focus {
-        background-color: @color-dark-5;
+        background-color: @color-dark-5 !important;
     }
 }
 .form-control {
@@ -170,11 +177,61 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /**
+ * Multiline tiles.
+ */
+
+@media ( min-width: 425px ) {
+    .tile-box-shortcut {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 80px;
+        .tile-content-wrapper {
+            width: 80px;
+            min-height: auto;
+            text-align: center;
+            position: static;
+            .fa {
+                position: static;
+            }
+        }
+        .tile-header {
+            flex: 1;
+            padding: 0 20px 0 0;
+            position: static;
+        }
+    }
+}
+
+/**
+ * Alerts.
+ */
+
+.alert-success, .alert-success a, .parsley-success {
+    color: @color-black;
+}
+
+/**
+ * Select.
+ */
+
+select {
+    background-color: @color-dark-3 !important;
+    color: @color-white;
+    option {
+        background-color: @color-dark-3;
+        color: @color-white;
+    }
+}
+
+/**
  * Optionals.
  */
 
 #loading {
     height: if( @remove-loader, 0%, 100% );
+    overflow: hidden;
 }
 #sidebar-menu li span.bs-label.badge-yellow {
     display: if( @remove-new, none, inline );
@@ -186,4 +243,20 @@ h1, h2, h3, h4, h5, h6,
 /**
  * Unsorted.
  */
+
+// Users > List Users
+// Packages > List Packages
+// Table
+
+// Users > Create New User
+// Buttons
+
+// Databases > Create Database
+// FTP > Create FTP Account
+// Backup > Create Backup
+// Select
+
+#page-sidebar ul li.sfHover > a.sf-with-ul, .btn-link:hover, .content-box-header.bg-default > .ui-tabs-nav li > a:hover, .content-box-header.bg-gray > .ui-tabs-nav li > a:hover, .content-box-header.bg-white > .ui-tabs-nav li > a:hover, .features-tour-box h3, .font-primary, .tabs-nav li a:hover, .tabs-nav li.active a, a:hover, table.dataTable thead th.sorting_asc::after, table.dataTable thead th.sorting_desc::after {
+    color: @color-link-hover;
+}
 
