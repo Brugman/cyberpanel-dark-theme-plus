@@ -2,6 +2,8 @@
 
 > A Dark Theme for [CyberPanel](https://cyberpanel.net/).
 
+![screenshot](/screenshot.png)
+
 ## v1 checklist
 
 This project is still being developed.
