@@ -47,14 +47,14 @@ Pull requests are welcome. Please try to match the current code formatting.
 
 ### Installation
 
-1. `npm i`
+1. `pnpm i`
 
 ### Build CSS
 
 Command | Action
 :--- |:---
-`npx gulp` | Build once
-`npx gulp watch` | Build continuously
+`pnpm gulp` | Build once
+`pnpm gulp watch` | Build continuously
 
 ## Author
 
