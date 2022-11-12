@@ -4,9 +4,11 @@
 
 ![screenshot](/screenshot.png)
 
-## v1 checklist
+## Abandoned
 
-This project is still being developed.
+This project is abandoned! Newer versions of CyberPanel include multiple dark themes. I recommend you use those. I'm moving the Plus features of this repo that are still valuable to [Brugman/cyberpanel-design-tweaks](https://github.com/Brugman/cyberpanel-design-tweaks).
+
+## v1 checklist
 
 - [x] Add Less build system.
 - [x] Repaint CyberPanel as white on black.
@@ -23,15 +25,15 @@ Copy the CSS from `css/theme.min.css` to the "Custom CSS" field on the "Design" 
 
 Besides repainting the UI to be white text on a black background I've also changed the following:
 
-The page loader is removed. Without the loader the header and menu remain visible at all times, keeping you visually grounded, which let's you browse around faster.
+- The page loader is removed. Without the loader the header and menu remain visible at all times, keeping you visually grounded, which let's you browse around faster.
 
-The "NEW" tags on menu items are removed. You don't need to be reminded about the current version's new features every day. You don't magically get new features without updating manually. Whenever you update, go check out the changelog.
+- The "NEW" tags on menu items are removed. You don't need to be reminded about the current version's new features every day. You don't magically get new features without updating manually. Whenever you update, go check out the changelog.
 
-The menu icons wiggle is removed. `¯\_(ツ)_/¯`
+- The menu icons wiggle is removed.
 
-The Raleway font has been replaced by Open Sans. Raleway is way too thin to be easily readable at this size.
+- The Raleway font has been replaced by Open Sans. Raleway is way too thin to be easily readable at this size.
 
-Unnecessary lines/borders are removed. As [Refactoring UI](https://www.refactoringui.com/) commands it.
+- Unnecessary lines/borders are removed. As [Refactoring UI](https://www.refactoringui.com/) commands it.
 
 ## Contributing
 
